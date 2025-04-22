@@ -28,7 +28,7 @@ print(f"✅ OpenAI API Key: {openai.api_key}")  # ← 加這行來印出金鑰�
 
 def GPT_response(text):
     # 接收回應
-    response = openai.Completion.create(model="gpt-3.5-turbo-instruct", prompt=text, temperature=0.5, max_tokens=500)
+    response = openai.Completion.create(model="deepseek/deepseek-chat-v3-0324:free", prompt=text, temperature=0.5, max_tokens=500)
     print(response)
     # 重組回應
     answer = response['choices'][0]['text'].replace('。','')
